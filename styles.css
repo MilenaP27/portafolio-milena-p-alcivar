@@ -1,0 +1,197 @@
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: "Segoe UI", Arial, sans-serif; line-height:1.6; background:#fdfdfd; color:#222; }
+
+/* Colores favoritos */
+:root {
+  --amarillo: #fcdb56;
+  --celeste: #6EC5E9;
+  --lila: #C084FC;
+  --fondo: #fffefc;
+  --texto: #222;
+  --gris: #666;
+  --radius: 12px;
+}
+
+/* Contenedor general */
+.container { max-width:1100px; margin:0 auto; padding:2rem; }
+
+/* HEADER */
+.site-header { background:linear-gradient(90deg,var(--celeste), var(--lila)); color:white; position:sticky; top:0; z-index:100; }
+.header-inner { display:flex; justify-content:space-between; align-items:center; }
+.logo { font-weight:bold; font-size:1.2rem; color:white; text-decoration:none; }
+
+/* NAV */
+.nav ul { list-style:none; display:flex; gap:1rem; }
+.nav a { color:white; text-decoration:none; font-weight:500; }
+.nav a:hover { text-decoration:underline; }
+
+/* Hamburguesa (móvil) */
+.hamburger { background:none; border:0; cursor:pointer; display:none; flex-direction:column; gap:5px; }
+.hamburger .bar { width:24px; height:3px; background:white; }
+
+/* INTRO */
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalmente */
+  align-items: center;     /* centra horizontalmente */
+  min-height: 100vh;       /* ocupa toda la altura de la pantalla */
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(180deg, var(--amarillo) 5%, #fff 100%);
+}
+
+.intro h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.intro .subtitle {
+  font-size: 1.4rem;
+  color: var(--gris);
+  margin-bottom: 2rem;
+}
+
+
+/* ABOUT con foto */
+.about-grid {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* foto (250px) + texto (resto) */
+  gap: 2rem;
+  align-items: center; /* centra la foto con el texto verticalmente */
+}
+
+.avatar {
+  width: 100%;
+  max-width: 220px;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px rgba(0,0,0,.15);
+}
+
+
+/* SKILLS */
+.skills, .projects {
+  background: linear-gradient(180deg, #f0faff 0%, #fff 100%); /* azul para skills */
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 900px;   /* límite de ancho */
+  text-align: center; /* centra el contenido */
+}
+/* PROJECTS */
+.projects {
+  background: linear-gradient(180deg, #f8f0ff 0%, #fff 100%); /* lila para projects */
+}
+
+/* CONTACT */
+.contact h2 { margin-bottom:1rem; font-size:1.8rem; color:var(--lila); }
+.contact form { display:grid; gap:1rem; max-width:500px; margin:auto; }
+.contact input, .contact textarea { padding:.7rem; border:1px solid #ccc; border-radius:var(--radius); font-size:1rem; }
+.btn {
+  background: var(--amarillo);
+  color: #222;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--celeste);
+  color: white;
+}
+
+
+/* FOOTER */
+.site-footer { text-align:center; padding:1rem; background:var(--celeste); color:white; margin-top:2rem; }
+
+/* Responsive */
+@media (max-width:768px){
+  .nav { display:none; }
+  .hamburger { display:flex; }
+  .nav.open { display:block; background:var(--celeste); padding:1rem; }
+  .nav ul { flex-direction:column; }
+}
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* solo una columna en móvil */
+    text-align: center;
+  }
+  .avatar {
+    margin: 0 auto 1.5rem auto; /* centramos la foto */
+  }
+}
+/* Personal Info Strip */
+.personal-info {
+  background: linear-gradient(90deg, var(--celeste), var(--lila));
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.personal-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.personal-info a {
+  color: var(--amarillo);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.personal-info a:hover {
+  text-decoration: underline;
+}
+/* INTRO con fondo suave */
+.intro {
+  text-align: center;
+  padding: 5rem 2rem;
+  background: linear-gradient(180deg, var(--amarillo)20%, #fff 100%);
+}
+
+/* SKILLS con celeste suave */
+.skills {
+  background: linear-gradient(180deg, #f0faff 0%, #fff 100%);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+
+/* PROJECTS con lila suave */
+.projects {
+  background: linear-gradient(180deg, #f8f0ff 0%, #fff 100%);
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+}
+h1, h2, h3 {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.btn {
+  animation: pulse 2s infinite;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+.site-footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--lila);
+  color: white;
+  margin-top: 0;
+  font-size: 0.9rem;
+}
+

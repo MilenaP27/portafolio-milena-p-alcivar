@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio — Milena Peña</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">Milena Peña</a>
+
+      <button class="hamburger" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <nav id="main-nav" class="nav">
+        <ul>
+          <li><a href="#about">Acerca de mí</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- INTRO -->
+    <section id="intro" class="intro container">
+      <h1>¡Hola! soy <span class="highlight">Milena Peña</span></h1>
+      <h2 class="subtitle">Aprendiz de desarrollador web</h2>
+      <a href="#contact" class="btn">Contáctame</a>
+    </section>
+
+        <!-- ABOUT -->
+    <section id="about" class="about container">
+      <h2>Acerca de mí 🐤</h2>
+      <div class="about-grid">
+        <!-- Foto -->
+        <img src="assets/images/mili.png" alt="Foto de Milena Peña" class="avatar" />
+        
+        <!-- Texto -->
+        <div>
+          <p>
+            Soy una Aprendiz de desarrolladora web quien empieza con el pie derecho y busca aprender todo lo posible para ayudarlo. 
+            Estoy aprendiendo con <strong>HTML, CSS y JavaScript</strong>.
+          </p>
+          <p>
+            Mi objetivo es crear sitios web que no solo se vean bien, sino que también brinden una excelente experiencia de usuario, tratando de utilizar todos mis conocimientos posibles.
+          </p>
+          <p>
+            Cuando no estoy aprendiendo a programar me gusta leer, escuchar música, ver películas y jugar videojuegos. 
+            Estoy comenzando con una cuenta de dibujo en Instagram, me alegra compartirlo. ¡Gracias por confiar en mí!
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills container">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <h3>HTML</h3>
+          <div class="progress">
+            <div class="progress-bar" data-percent="75"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>CSS</h3>
+          <div class="progress">
+            <div class="progress-bar" data-percent="68"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3>JavaScript</h3>
+          <div class="progress">
+            <div class="progress-bar" data-percent="79"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+       <!-- PROJECTS -->
+    <section id="projects" class="projects container">
+      <h2>Proyectos 🐋</h2>
+      <div class="projects-grid">
+        <!-- Proyecto Instagram -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <h3>Instagram</h3>
+              <p>Mi cuenta de dibujos 🖌️</p>
+              <br> <!-- separación -->
+              <a href="https://www.instagram.com/milikw165?igsh=MTVtdmZnb2l5MjlwYQ==" 
+                 target="_blank" class="btn">Visitar</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Proyecto vacío -->
+        <article class="card">
+          <div class="card-inner">
+            <div class="card-face card-front">
+              <h3>Proyecto 2</h3>
+              <p>Próximamente...</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+
+           <!-- CONTACT -->
+    <section id="contact" class="contact container">
+      <h2>Contacto ✨</h2>
+      <form id="contactForm" novalidate>
+        <label for="name">Nombre*</label>
+        <input id="name" name="name" type="text" required minlength="2" />
+        <small class="error"></small>
+
+        <label for="email">Email*</label>
+        <input id="email" name="email" type="email" required />
+        <small class="error"></small>
+
+        <label for="message">Mensaje*</label>
+        <textarea id="message" name="message" required minlength="10"></textarea>
+        <small class="error"></small>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <div id="formResponse"></div>
+    </section>
+
+    <!-- PERSONAL INFO STRIP -->
+    <section class="personal-info">
+      <div class="container">
+        <p><strong>Email:</strong> <a href="mailto:milena.p.alcivar16@gmail.com">milena.p.alcivar16@gmail.com</a></p>
+        <p><strong>Teléfono:</strong> <a href="tel:+593969485214">+593 96 948 5214</a></p>
+        <p><strong>Instagram:</strong> <a href="https://www.instagram.com/ducks_and_lilies" target="_blank">@ducks_and_lilies</a></p>
+      </div>
+    </section>
